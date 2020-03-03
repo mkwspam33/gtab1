@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>global.WikiHelperAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Assistance with wiki functions</description>
+        <name>WikiHelperAjax</name>
+        <script><![CDATA[var WikiHelperAjax = Class.create();
+
+WikiHelperAjax.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+  wikiToHTML: function() {
+     var element = this.getValue();
+     var wikiText = this.getChars();
+
+     if (wikiText == '')
+         return "(" + gs.getMessage("Wiki text empty") + ")";
+
+     var gwm = new GlideWikiModel();
+     if (this.getParameter("sysparm_cache_images") == "false")
+         gwm.setCacheImages(false);
+     gwm.setLinkBaseURL(gwm.getLinkBaseURL() + "&sysparm_field=" + element);
+     return gwm.render(wikiText);
+  },
+
+  type: "WikiHelperAjax"
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>glide.bow</sys_created_by>
+        <sys_created_on>2009-11-11 01:01:47</sys_created_on>
+        <sys_id>e0c267ea0a25810400e0d6f7284bdbe8</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>WikiHelperAjax</sys_name>
+        <sys_package display_value="Wiki Plugin" source="com.glide.wiki">8ae8c475bd1300100ed8f3f9e29d313c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="G Tab1">6296e6060c130010f87722c08633e2d3</sys_scope>
+        <sys_update_name>sys_script_include_e0c267ea0a25810400e0d6f7284bdbe8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-03 20:13:47</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="G Tab1">6296e6060c130010f87722c08633e2d3</claim_owner_scope>
+        <claim_timestamp>170a20870ef0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_e0c267ea0a25810400e0d6f7284bdbe8</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>G Tab1</previous_claim_name>
+        <previous_claim_scope>6296e6060c130010f87722c08633e2d3</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-03 20:13:47</sys_created_on>
+        <sys_id>a83a8706b5530010f877b0994690f220</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-03 20:13:47</sys_updated_on>
+    </sys_claim>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="G Tab1">6296e6060c130010f87722c08633e2d3</claim_owner_scope>
+        <claim_timestamp>170a20870e50000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_e0c267ea0a25810400e0d6f7284bdbe8</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>com.glide.wiki</previous_claim_name>
+        <previous_claim_scope>com.glide.wiki</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-03 20:13:47</sys_created_on>
+        <sys_id>e03a8706b5530010f877b0994690f221</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-03 20:13:47</sys_updated_on>
+    </sys_claim>
+</record_update>
