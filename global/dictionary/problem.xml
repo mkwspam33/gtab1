@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=true" audit="true" defaultsort="-1" extends="task" label="Problem" max_length="40" name="problem" sizeclass="24" text_index="true" type="collection">
+        <element label="My Str" max_length="40" name="u_my_str" type="string"/>
+    </element>
+</database>

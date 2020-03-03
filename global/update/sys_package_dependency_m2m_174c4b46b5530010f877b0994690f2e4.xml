@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Problem Management" source="com.snc.problem">00dac0f9bdd300100ed8f3f9e29d3128</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-03 20:22:59</sys_created_on>
+        <sys_id>174c4b46b5530010f877b0994690f2e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="G Tab1" source="6296e6060c130010f87722c08633e2d3">6296e6060c130010f87722c08633e2d3</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-03 20:22:59</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
